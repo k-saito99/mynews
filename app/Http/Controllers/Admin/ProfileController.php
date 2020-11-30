@@ -11,23 +11,23 @@ use Carbon\Carbon;
 
 class ProfileController extends Controller
 {
-    public function add()
-    {
+public function add()
+{
         return view('admin.profile.create');
-    }
+}
 
-    public function create(Request $request)
-    {
+public function create(Request $request)
+{
         return redirect('admin/profile/create');
-    }
+}
 
-    public function edit()
-    {
+public function edit()
+{
         return view('admin.profile.edit');
-    }
+}
 
-    public function update(Request $request)
-    {
+public function update(Request $request)
+{
         
      $this->validate($request, Profile::$rules);
      
@@ -48,5 +48,5 @@ class ProfileController extends Controller
         
         
         return redirect('admin/profile/');
-    }  //
+ }  //
 }
