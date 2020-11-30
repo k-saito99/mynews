@@ -11,24 +11,24 @@ class ProfileHistoriesTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
+public function up()
+{
         Schema::create('profileHistories', function (Blueprint $table) {
                     $table->id();
                     $table->integer('profile_id');
                     $table->string('edited_at');
 
                     $table->timestamps();
-                });
-    }
+  });
+ }
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
-    {
+public function down()
+{
         Schema::dropIfExists('histories');//
-    }
+ }
 }
