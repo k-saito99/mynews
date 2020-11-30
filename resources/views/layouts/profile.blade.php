@@ -25,16 +25,16 @@
     <body>
         <div id="app">
 {{-- 画面上部に表示するナビゲーションバーです。 --}}
-        <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
-                <div class="container">
-                    <a class="navbar-brand" href="{{ url('/') }}">
+ <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
+    <div class="container">
+         <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 <!-- Left Side Of Navbar -->
     <ul class="navbar-nav mr-auto">
@@ -46,10 +46,10 @@
 
 
 <!-- Authentication Links -->
-    {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
+{{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
     @guest
     <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-    {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
+{{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
     @else
     <li class="nav-item dropdown">
     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -68,8 +68,8 @@
     </form>
                                 </div>
                             </li>
-                            @endguest
-                            {{-- 以上までを追記 --}}
+  @endguest
+{{-- 以上までを追記 --}}
                         </ul>
 
                         </ul>
@@ -79,9 +79,9 @@
 {{-- ここまでナビゲーションバー --}} 
 
     <main class="py-4">
-                {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
-                @yield('content')
+{{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
+ @yield('content')
             </main>
         </div>
-    </body>
+      </body>
     </html>
