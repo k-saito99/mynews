@@ -11,8 +11,8 @@ class CreateProfileTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
+public function up()
+{
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->string('name');  
@@ -20,16 +20,16 @@ class CreateProfileTable extends Migration
             $table->string('hobby'); 
             $table->string('introduction');             
             $table->timestamps();
-        });
-    }
+     });
+}
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
-    {
+public function down()
+{
         Schema::dropIfExists('profiles');
-    }
+ }
 }
