@@ -19,12 +19,12 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() 
 Route::get('news/create',
-    'Admin\NewsController@add')->middleware('auth');
-Route::post('news/create', 'Admin\NewsController@create')->middleware('auth');
-Route::get('news', 'Admin\NewsController@index')->middleware('auth');
-Route::get('news/edit', 'Admin\NewsController@edit')->middleware('auth');
-Route::post('news/edit', 'Admin\NewsController@update')->middleware('auth');
-Route::get('news/delete', 'Admin\NewsController@delete')->middleware('auth');
+    'Admin\NewsController@add');
+Route::post('news/create', 'Admin\NewsController@create');
+Route::get('news', 'Admin\NewsController@index');
+Route::get('news/edit', 'Admin\NewsController@edit');
+Route::post('news/edit', 'Admin\NewsController@update');
+Route::get('news/delete', 'Admin\NewsController@delete');
 /*第５部の課題４ web.phpを編集して、getメソッドでadmin/profile/create にアクセスしたら ProfileController の add Action に、admin/profile/edit にアクセスしたら ProfileController の edit Action に割り当てるように設定してください。*/
 Route::get('profile/create', 'Admin\ProfileController@add');
 Route::post('profile/create', 'Admin\ProfileController@create');

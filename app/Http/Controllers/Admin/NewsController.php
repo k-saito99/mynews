@@ -12,14 +12,14 @@ use Carbon\Carbon;
 class NewsController extends Controller
 {
     //
-    public function add()
-    {
+public function add()
+{
         return view('admin.news.create');
-    }
+}
 
 
-    public function create(Request $request)
-  {
+public function create(Request $request)
+{
 
      // 以下を追記
       // Varidationを行う
