@@ -14,7 +14,7 @@ class ProfileController extends Controller
     
   public function add()
   {
-        return view('admin.news.create');
+        return view('admin.profile.create');
   }
 
 
@@ -25,7 +25,7 @@ class ProfileController extends Controller
       // Varidationを行う
       $this->validate($request, Profile::$rules);
 
-      $news = new Profile;
+      $profile = new Profile;
       $form = $request->all();
 
       // フォームから画像が送信されてきたら、保存して、$profile->image_path に画像のパスを保存する
@@ -33,7 +33,7 @@ class ProfileController extends Controller
         $path = $request->file('image')->store('public/image');
         $profile->image_path = basename($path);
       } else {
-          $news->image_path = null;
+          $profile->image_path = null;
       }
 
       // フォームから送信されてきた_tokenを削除する

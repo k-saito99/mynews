@@ -14,9 +14,9 @@
     <div class="row">
       <div class="col-md-8 mx-auto">
         <h2>My プロフィール</h2>
-{-- resources/views/admin/profile/create.blade.php を編集して、--}
-{--氏名(name)、性別(gender)、趣味(hobby)、自己紹介欄(introduction)を入力するフォームを作成してください。--}
-{--また、formの送信先(<form action=”この部分”>)を、Admin\ProfileController の create Action に指定してください。--}
+{{-- resources/views/admin/profile/create.blade.php を編集して、--}}
+{{--氏名(name)、性別(gender)、趣味(hobby)、自己紹介欄(introduction)を入力するフォームを作成してください。--}}
+{{--また、formの送信先(<form action=”この部分”>)を、Admin\ProfileController の create Action に指定してください。--}}
 
         <form action="{{ action('Admin\ProfileController@create') }}" method="post" enctype="multipart/form-data">
           @if (count($errors) > 0)
